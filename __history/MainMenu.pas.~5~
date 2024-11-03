@@ -1,0 +1,55 @@
+unit MainMenu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.MPlayer, Vcl.Imaging.GIFImg;
+type
+  TmMainMenu = class(TForm)
+    Label1: TLabel;
+    BitBtn1: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    procedure BitBtn4Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  mMainMenu: TmMainMenu;
+
+implementation
+
+{$R *.dfm}
+
+uses LoadingR;
+
+procedure TmMainMenu.BitBtn1Click(Sender: TObject);
+begin
+mMainMenu.Hide;
+lLoadingR.Show;
+end;
+
+procedure TmMainMenu.BitBtn3Click(Sender: TObject);
+begin
+if MessageDlgPos('Вы уверены что хотите закрыть?',
+mtInformation,[mbYes,mbNo],0,770,538)
+=mrYes
+then
+{mMainMenu.Hide;
+Form.Show;}
+end;
+
+procedure TmMainMenu.BitBtn4Click(Sender: TObject);
+begin
+close;
+end;
+
+
+end.

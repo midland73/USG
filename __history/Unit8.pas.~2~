@@ -1,0 +1,43 @@
+unit Unit8;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.jpeg, Vcl.Buttons;
+
+type
+  TFrog = class(TForm)
+    Label1: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Memo1: TMemo;
+    BitBtn1: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frog: TFrog;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit5;
+
+
+
+procedure TFrog.BitBtn1Click(Sender: TObject);
+begin
+Form5.Show;
+Frog.Hide;
+end;
+
+
+
+end.

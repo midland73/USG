@@ -1,0 +1,125 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.GIFImg, Vcl.Buttons,
+  Vcl.ExtCtrls, Vcl.Imaging.pngimage;
+
+type
+  TForm5 = class(TForm)
+    BitBtn1: TBitBtn;
+    Image0: TImage;
+    Image2: TImage;
+    Label1: TLabel;
+    Image3: TImage;
+    Label2: TLabel;
+    Image1: TImage;
+    Label3: TLabel;
+    Image4: TImage;
+    Label4: TLabel;
+    Image5: TImage;
+    Label5: TLabel;
+    Image6: TImage;
+    Label6: TLabel;
+    Image7: TImage;
+    Label7: TLabel;
+    Image8: TImage;
+    Label8: TLabel;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Image6Click(Sender: TObject);
+    procedure Image7Click(Sender: TObject);
+    procedure Image8Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit4, Unit6;
+
+procedure TForm5.BitBtn1Click(Sender: TObject);
+begin
+Form4.Show;
+Form5.Hide;
+end;
+
+procedure TForm5.Image2Click(Sender: TObject);
+begin
+ if Label2.Visible then
+    Label2.Visible := False
+  else
+    Label2.Visible := True;
+end;
+
+
+
+procedure TForm5.Image3Click(Sender: TObject);
+begin
+  if Label3.Visible then
+    Label3.Visible := False
+  else
+    Label3.Visible := True;
+end;
+
+
+procedure TForm5.Image4Click(Sender: TObject);
+begin
+if Label4.Visible then
+    Label4.Visible := False
+  else
+    Label4.Visible := True;
+end;
+
+procedure TForm5.Image6Click(Sender: TObject);
+begin
+   if Label6.Visible then
+    Label6.Visible := False
+  else
+    Label6.Visible := True;
+end;
+
+procedure TForm5.Image7Click(Sender: TObject);
+begin
+if Label7.Visible then
+    Label7.Visible := False
+  else
+    Label7.Visible := True;
+end;
+
+procedure TForm5.Image8Click(Sender: TObject);
+begin
+if Label8.Visible then
+    Label8.Visible := False
+  else
+    Label8.Visible := True;
+end;
+
+procedure TForm5.Image1Click(Sender: TObject);
+begin
+  if Label1.Visible then
+    Label1.Visible := False
+  else
+    Label1.Visible := True;
+end;
+
+procedure TForm5.Label1Click(Sender: TObject);
+begin
+Form5.Hide;
+Zhiliber.Show;
+end;
+
+end.

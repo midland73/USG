@@ -1,0 +1,56 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Imaging.GIFImg, Vcl.ExtCtrls;
+
+type
+  TForm4 = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    Image2: TImage;
+    Image3: TImage;
+    Timer3: TTimer;
+    procedure FormShow(Sender: TObject);
+    procedure Timer3Timer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+  c:integer;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2;
+
+procedure TForm4.FormShow(Sender: TObject);
+begin
+  Randomize;
+  c := Random(150);
+  if c < 50 then
+    (Image1.Picture.Graphic as TGIFImage).Animate := True
+  else if c < 100 then
+  if c>50 then
+    (Image2.Picture.Graphic as TGIFImage).Animate := True
+  else
+    (Image3.Picture.Graphic as TGIFImage).Animate := True;
+  Timer3.Enabled := True;
+end;
+
+procedure TForm4.Timer3Timer(Sender: TObject);
+begin
+Timer3.Destroy;
+Form2.Show;
+Form4.Hide;
+end;
+
+end.

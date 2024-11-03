@@ -1,0 +1,40 @@
+unit Unit9;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TMail = class(TForm)
+    Label1: TLabel;
+    p: TImage;
+    Image2: TImage;
+    Memo1: TMemo;
+    Image1: TImage;
+    BitBtn1: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Mail: TMail;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit5;
+
+procedure TMail.BitBtn1Click(Sender: TObject);
+begin
+Form5.Show;
+Mail.Hide;
+end;
+
+end.

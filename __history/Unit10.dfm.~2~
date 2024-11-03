@@ -1,0 +1,23 @@
+object Clown: TClown
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'Clown'
+  ClientHeight = 514
+  ClientWidth = 880
+  Color = clMenuText
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 280
+    Top = 264
+    Width = 34
+    Height = 15
+    Caption = 'Label1'
+  end
+end

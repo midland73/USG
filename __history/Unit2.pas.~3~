@@ -1,0 +1,46 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.MPlayer;
+type
+  TForm2 = class(TForm)
+    Label1: TLabel;
+    BitBtn1: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    Image1: TImage;
+    procedure BitBtn4Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3;
+
+
+
+procedure TForm2.BitBtn1Click(Sender: TObject);
+begin
+Form2.Hide;
+Form3.Show;
+end;
+
+procedure TForm2.BitBtn4Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

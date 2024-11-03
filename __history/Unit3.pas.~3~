@@ -1,0 +1,58 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.GIFImg;
+
+type
+  TForm3 = class(TForm)
+    Label2: TLabel;
+    Timer2: TTimer;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+
+    procedure Timer2Timer(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+  c:integer;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit4, Unit5;
+
+procedure TForm3.FormShow(Sender: TObject);
+begin
+  Randomize;
+  c := Random(150);
+
+  if c < 50 then
+    (Image1.Picture.Graphic as TGIFImage).Animate := True
+  else if c < 100 then
+  if c>50 then
+    (Image2.Picture.Graphic as TGIFImage).Animate := True
+  else
+    (Image3.Picture.Graphic as TGIFImage).Animate := True;
+  Timer2.Enabled := True;
+end;
+
+procedure TForm3.Timer2Timer(Sender: TObject);
+begin
+Timer2.Destroy;
+Form5.Show;
+Form3.Hide;
+end;
+
+end.
